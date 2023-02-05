@@ -1,0 +1,151 @@
+@use "globals" as *;
+
+:root {
+  --primary: hsl(234, 12%, 34%);
+  --accent: hsl(229, 6%, 66%);
+  --neutral: hsl(0, 0%, 98%);
+
+  --red: hsl(0, 78%, 62%);
+  --Cyan: hsl(180, 62%, 55%);
+  --Orange: hsl(34, 97%, 64%);
+  --Blue: hsl(212, 86%, 64%);
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  text-align: center;
+  color: var(--primary);
+}
+
+.container {
+  padding: 0 rem(32px);
+}
+
+main {
+  .container {
+    height: rem(248px);
+    display: grid;
+    place-content: end center;
+    max-width: rem(541px);
+    margin: auto;
+  }
+  h1 {
+    font-size: rem(24px);
+    font-weight: 200;
+  }
+  h2 {
+    font-size: rem(24px);
+    font-weight: 600;
+    margin-bottom: 1rem;
+  }
+  p {
+    font-size: rem(15px);
+    font-weight: 400;
+    color: var(--accent);
+  }
+}
+article {
+  .container {
+    display: grid;
+    gap: 1.5rem;
+    margin-top: rem(77px);
+    padding-bottom: rem(77px);
+    place-content: center;
+  }
+  .card {
+    box-shadow: 0px 2px 20px -10px var(--primary);
+    border-radius: rem(5px);
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    padding: rem(22px) rem(28px);
+    min-height: rem(222px);
+    max-width: rem(350px);
+    max-height: rem(250px);
+    &-content {
+      text-align: start;
+    }
+    &-title {
+      font-size: rem(20px);
+      font-weight: 600;
+    }
+    &-text {
+      font-size: rem(13px);
+      color: var(--accent);
+    }
+    img {
+      position: absolute;
+      bottom: rem(28px);
+      right: rem(28px);
+      width: rem(57px);
+    }
+  }
+  .red {
+    border-top: var(--red) solid rem(4px);
+  }
+  .cyan {
+    border-top: var(--Cyan) solid rem(4px);
+  }
+  .orange {
+    border-top: var(--Orange) solid rem(4px);
+  }
+  .blue {
+    border-top: var(--Blue) solid rem(4px);
+  }
+}
+
+@media (min-width: rem(720px)) {
+  main {
+    h1 {
+      font-size: rem(30px);
+    }
+    h2 {
+      font-size: rem(30px);
+    }
+  }
+  article {
+    .container {
+      grid-template-columns: repeat(2, max-content);
+      grid-template-rows: repeat(2, max-content);
+    }
+    .card {
+      padding: rem(31px);
+      min-height: rem(250px);
+      img {
+        bottom: rem(32px);
+        right: rem(32px);
+        width: rem(64px);
+      }
+    }
+  }
+}
+
+@media (min-width: rem(1200px)) {
+  main {
+    h1 {
+      font-size: rem(36px);
+    }
+    h2 {
+      font-size: rem(36px);
+    }
+  }
+  article {
+    .container {
+      gap: rem(31px);
+      grid-template-columns: repeat(3, max-content);
+      grid-template-rows: repeat(4, max-content);
+      .red {
+       grid-area: 1 / 2 / 3 / 3;
+      }
+      .cyan {
+        grid-area: 2 / 1 / 4 / 2;
+      }
+      .orange {
+        grid-area: 3 / 2 / 5 / 3;
+      }
+      .blue {
+        grid-area: 2 / 3 / 4 / 4;
+      }
+    }
+  }
+}
