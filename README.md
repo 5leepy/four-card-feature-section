@@ -11,7 +11,7 @@ This is a solution to the [Four card feature section challenge on Frontend Mento
 
 ### Links
 
-- Solutions URL: [Frontend Mentor](https://github.com/5leepy/ping-coming-soon-page/)
+- Solutions URL: [Frontend Mentor](https://www.frontendmentor.io/challenges/four-card-feature-section-weK1eFYK/hub)
 - Live Site URL: [Netlify](https://5leepy-four-card-feature-section.netlify.app/)
 
 ### Built with
